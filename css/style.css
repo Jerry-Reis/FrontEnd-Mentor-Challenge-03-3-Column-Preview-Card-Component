@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --primary-bright-orange: hsl(31, 77%, 52%);
+    --primary-dark-cyan: hsl(184, 100%, 22%);
+    --primary-very-dark-cyan: hsl(179, 100%, 13%);
+
+    --neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --neutral-very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca';
+    text-decoration: none;
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+
+    margin: 5rem;
+}
+
+.card {
+    color: var(--neutral-transparent-white);
+}
+
+.card-container {
+    padding: 5rem;
+    max-width: 30rem;
+}
+
+.card-icon img {
+    height: 4rem;
+    width: auto;
+}
+
+.card-title h1 {
+    margin: 4rem 0rem;
+
+    font-family: 'Big Shoulders Display';
+    font-size: 3.6rem;
+    text-transform: uppercase;
+
+    color: var(--neutral-very-light-gray);
+}
+
+.card-descrip {
+    margin-bottom: 9rem;
+}
+
+.card-descrip p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
+.card-btn {
+    padding: 1rem 2.5rem;
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    background-color: var(--neutral-very-light-gray);
+    border-radius: 5rem;
+
+    cursor: pointer;
+}
+
+.card-btn a {
+    display: inline-block;
+}
+
+.card-btn:hover {
+    border: 0.2rem solid var(--neutral-very-light-gray);
+    color: var(--neutral-transparent-white);
+}
+
+.first {
+    background-color: var(--primary-bright-orange);
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+}
+
+.first a {
+    color: var(--primary-bright-orange);
+}
+
+.first .card-btn:hover {
+    background-color: var(--primary-bright-orange);
+}
+
+.second {
+    background-color: var(--primary-dark-cyan);
+}
+
+.second a {
+    color: var(--primary-dark-cyan);
+}
+
+.second .card-btn:hover {
+    background-color: var(--primary-dark-cyan);
+}
+
+.third {
+    background-color: var(--primary-very-dark-cyan);
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+}
+
+.third a {
+    color: var(--primary-very-dark-cyan);
+}
+
+.third .card-btn:hover {
+    background-color: var(--primary-very-dark-cyan);
+}
+
+@media (max-width: 860px) {
+    body {
+        height: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card-container {
+        padding: 3.2rem;
+        max-width: 34rem;
+    }
+
+    .first {
+        background-color: var(--primary-bright-orange);
+        border-radius: 0.8rem 0.8rem 0rem 0rem;
+    }
+
+    .third {
+        background-color: var(--primary-very-dark-cyan);
+        border-radius: 0rem 0rem 0.8rem 0.8rem;
+    }
+
+    .card-descrip {
+        margin-bottom: 3rem;
+    }
+}
